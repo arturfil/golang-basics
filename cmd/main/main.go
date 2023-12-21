@@ -1,7 +1,10 @@
 package main
 
-import "github.com/learning-golang/concurrency"
+import (
+	"github.com/learning-golang/interfaces"
+)
+
 
 func main() {
-   concurrency.WorkerMain()
+   interfaces.InterfacesMain() 
 }

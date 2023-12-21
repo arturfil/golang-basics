@@ -2,7 +2,16 @@ package functions
 
 import "fmt"
 
-func getInfo(first string, last string) (string, string) {
+func getInfo() (string, string) {
+    var (
+        first, last string
+    )
+
+    fmt.Println("Enter firstname: ")
+    fmt.Scan(&first)
+    fmt.Println("Enter lastname:")
+    fmt.Scan(&last)
+
     fmt.Printf("Hello %v %v\n", first, last)
     fullname := fmt.Sprintf("%v %v", first, last)
     fmt.Println("Inside getInfo: ", fullname)
@@ -15,7 +24,7 @@ func FunctionsMain() {
     var fullname = "John Doe"
     fmt.Println(fullname)
 
-    first, last := getInfo("Arturo", "Filio")
+    first, last := getInfo()
     fmt.Printf("The values are %v, %v, %v\n", first, last, fullname)
 
     fmt.Println(fullname)
